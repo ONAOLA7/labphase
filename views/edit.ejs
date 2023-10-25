@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+</head>
+<body>
+    <%- include('partials/header.ejs'); %>
+    <h1>Contact Page</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ipsam quasi earum, quibusdam id corporis aspernatur provident enim iure, suscipit quas nulla sint eligendi aperiam consequuntur eaque veniam quia ad!</p>
+    <form 
+        action="/blog/edit/<%= blog._id %>" 
+        method="post" 
+        enctype="application/x-www-form-urlencoded"
+    >
+        <input type="hidden" name="_method" value="PUT">
+        <div class="title">
+            <input type="text" name="title" value="<%= blog.title %>" placeholder="blog title.....">
+        </div>
+        <div class="snippet">
+            <input type="text" name="snippet" value="<%= blog.snippet %>" placeholder="blog snippet....">
+        </div>
+        <div class="body">
+            <textarea class="" name="body" placeholder="blog body......." cols="30" rows="10"><%= blog.body %></textarea>
+        </div>
+        <div class="handler">
+            <button type="submit">edit blog</button>
+        </div>
+    </form>
+</body>
+</html>

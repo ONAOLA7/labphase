@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.blog{
+    background-color: navy;
+    color: floralwhite;
+    padding: 20px;
+    margin: 20px 0;
+}
